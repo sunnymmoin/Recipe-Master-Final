@@ -1,8 +1,8 @@
 # 🍳 Recipe Master – Your Personal Cooking Assistant
 
 ### Group Members:
-* **[Your Name]** - [Sana Moin/BCS-2023F-286]
-* **[Partner Name]** - [Usman Kamlani /BCS-2023F-274]
+ [Sana Moin/BCS-2023F-286]
+ [Usman Kamlani /BCS-2023F-274]
 
 Recipe Master is a full-stack web application designed to simplify the way you find, save, and manage recipes. Built with a modern tech stack, it provides a seamless experience for food enthusiasts to explore new dishes based on ingredients they already have in their kitchen.
 
