@@ -57,7 +57,9 @@ Recipe Master is a full-stack web application designed to simplify the way you f
 
 ---
 
-## 📸 Screenshots<img width="471" height="508" alt="login" src="https://github.com/user-attachments/assets/2409400c-7962-4dc9-9f1c-e48724a6a3e8" />
+## 📸 Screenshots
+
+<img width="471" height="508" alt="login" src="https://github.com/user-attachments/assets/2409400c-7962-4dc9-9f1c-e48724a6a3e8" />
 <img width="1231" height="573" alt="home page" src="https://github.com/user-attachments/assets/ec529fbf-f8a5-4cdc-8ef6-0686e6789c8d" />
 <img width="949" height="326" alt="feedback" src="https://github.com/user-attachments/assets/3f37cd42-46ef-4a1b-8156-de8751ec09a2" />
 <img width="398" height="589" alt="fav" src="https://github.com/user-attachments/assets/a161becb-8178-46e8-9cfd-0917639ef0ff" />
