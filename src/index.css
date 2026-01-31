@@ -1,0 +1,267 @@
+/* GLOBAL VARIABLES */
+:root {
+  --primary-color: #ff6b6b; /* Salmon/Orange */
+  --secondary-color: #f7f9fc; /* Light Background */
+  --text-dark: #2d3436;
+  --text-light: #636e72;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  /* Subtle background pattern */
+  background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+}
+
+/* CUSTOM BUTTONS */
+.btn-primary, .btn-success, .btn-warning {
+  border-radius: 50px; /* Pill shape */
+  padding: 10px 25px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary { background: linear-gradient(45deg, #ff9f43, #ff6b6b); }
+.btn-success { background: linear-gradient(45deg, #1dd1a1, #10ac84); }
+.btn-warning { background: linear-gradient(45deg, #feca57, #ff9f43); color: white; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* CARD STYLING */
+.custom-card {
+  border: none;
+  border-radius: 20px;
+  background: white;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  height: 220px;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* INPUT FIELDS */
+.form-control {
+  border-radius: 15px;
+  border: 2px solid #eee;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+/* --- MODAL / POPUP STYLES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 👇 CHANGE THIS LINE FROM 1000 TO 2050 👇 */
+  z-index: 2050; /* Ensures it is above the sticky header */
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease
+}
+
+.modal-content-custom {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh; /* Prevent it from being too tall */
+  overflow-y: auto; /* Scroll inside the modal if steps are long */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ff6b6b;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* --- LATE NIGHT / DARK MODE --- */
+body.dark-mode {
+  background-color: #121212 !important; /* Deep Black */
+  background-image: radial-gradient(#2c2c2c 1px, transparent 1px);
+  color: #e0e0e0;
+}
+
+body.dark-mode .bg-white {
+  background-color: #1e1e1e !important; /* Dark Grey Components */
+  color: #fff;
+}
+
+body.dark-mode .text-muted {
+  color: #a0a0a0 !important;
+}
+
+body.dark-mode .custom-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .list-group-item {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #333;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode h4, body.dark-mode h5 {
+  color: #fff !important;
+}
+
+/* Neon Effects for Night Mode */
+body.dark-mode .btn-primary {
+  background: linear-gradient(45deg, #8e44ad, #c0392b); /* Purple/Red Neon */
+  border: none;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+}
+
+body.dark-mode .input-group-text, 
+body.dark-mode .form-control {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #888;
+}
+/* --- FIX FOR MODAL IN DARK MODE --- */
+body.dark-mode .modal-content-custom {
+  background-color: #1e1e1e; /* Dark Grey Background */
+  color: #fff;               /* White Text */
+  border: 1px solid #333;    /* Subtle Border */
+}
+
+/* Fix the Close 'X' button color */
+body.dark-mode .close-btn {
+  color: #fff; 
+  opacity: 0.8;
+}
+
+body.dark-mode .close-btn:hover {
+  color: #ff6b6b; /* Keep the hover effect */
+  opacity: 1;
+}
+
+/* Ensure the Related Recipes section blends in */
+body.dark-mode .border-top {
+  border-color: #333 !important; /* Darker separator line */
+}
+/* --- AESTHETIC NIGHT TOGGLE --- */
+.theme-toggle-btn {
+  background: none;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ff6b6b;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+}
+
+body.dark-mode .theme-toggle-btn {
+  border-color: #bb86fc;
+  color: #bb86fc;
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.4);
+}
+
+/* --- USER PROFILE AVATAR --- */
+.user-avatar-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-avatar-btn:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .user-avatar-btn {
+  background: linear-gradient(135deg, #bb86fc, #9a67ea);
+}
