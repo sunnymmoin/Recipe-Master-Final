@@ -2,6 +2,7 @@
 
 ### Group Members:
  [Sana Moin/BCS-2023F-286]
+ 
  [Usman Kamlani /BCS-2023F-274]
 
 Recipe Master is a full-stack web application designed to simplify the way you find, save, and manage recipes. Built with a modern tech stack, it provides a seamless experience for food enthusiasts to explore new dishes based on ingredients they already have in their kitchen.
@@ -65,8 +66,8 @@ Recipe Master is a full-stack web application designed to simplify the way you f
 <img width="398" height="589" alt="fav" src="https://github.com/user-attachments/assets/a161becb-8178-46e8-9cfd-0917639ef0ff" />
 <img width="603" he<img width="393" height="475" alt="cart" src="https://github.com/user-attachments/assets/1a95048c-17ad-47e6-bfd2-793dc7920234" />
 <img width="580" height="434" alt="exit page" src="https://github.com/user-attachments/assets/61d7595c-a24d-4ab2-975d-b4d2dfa1bad1" />
-ight="509" alt="recipe card" src="https://github.com/user-attachments/assets/501f67a8-8a0c-42b7-b18c-6de18dbcd926" />
 <img width="1218" height="589" alt="night mode" src="https://github.com/user-attachments/assets/bc71f493-f11f-4730-8de6-313d4d91b7a1" />
+<img width="603" height="509" alt="recipe card" src="https://github.com/user-attachments/assets/798ffb0d-8c16-4071-89d7-7d49b55c4ed9" />
 
 
 
